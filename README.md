@@ -100,7 +100,7 @@ $ trace_draw_node_graph ./architecture.json ./architecture.png
 $ . ~/ros2_foxy_fork/install/setup.bash  
 $ cd ~/ros2_ws/src/e2e_demo/e2e_demo/analysis/  
 $ jupyter-lab  
-% you can realize the following function in jupyter:  
+% You can realize the following function in jupyter:  
 e2e_latency.ipynb ：visualize the End-to-End latency  
 node_latency.ipynb ：visualize the node latency  
 comm_latency.ipynb：visualize the latency between nodes  
