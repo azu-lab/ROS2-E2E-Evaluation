@@ -2,7 +2,7 @@
 
 This document will introduce how to use our ROS 2 end-to-end evaluation tool.
 
-Setup:
+# Setup:
 1. Install LTTng:
 apt-add-repository ppa:lttng/stable-2.12
 apt-get update
@@ -25,7 +25,7 @@ sudo apt update && sudo apt install -y \
   python3-setuptools \
   python3-vcstool \
   wget
-# install some pip packages needed for testing
+% install some pip packages needed for testing
 python3 -m pip install -U \
   argcomplete \
   flake8-blind-except \
@@ -39,11 +39,11 @@ python3 -m pip install -U \
   pytest-repeat \
   pytest-rerunfailures \
   pytest
-# install Fast-RTPS dependencies
+% install Fast-RTPS dependencies
 sudo apt install --no-install-recommends -y \
   libasio-dev \
   libtinyxml2-dev
-# install Cyclone DDS dependencies
+% install Cyclone DDS dependencies
 sudo apt install --no-install-recommends -y \
   libcunit1-dev
 
@@ -56,13 +56,13 @@ $ cd ~/ros2_foxy_fork
 $ wget https://gist.githubusercontent.com/hsgwa/bf2ca762072fa87a86df3e13a0d8b2d5/raw/bebcf6675c84f233ab4a50531161316769ad0d17/ros2.repos
 $ vcs import src < ros2.repos
 $ colcon build --symlink-install
-# you can update the repository without rebuild:
+% you can update the repository without rebuild:
 $ vcs pull src
 
 5. Install flamegraph.pl:
 $ cd ~/.local/bin
 $ wget https://raw.githubusercontent.com/brendangregg/FlameGraph/master/flamegraph.pl -O ~/.local/bin/flamegraph.pl && chmod +x $_
-# you can also delete it:
+% you can also delete it:
 $ rm ~/.local/bin/flamegraph.pl
 
 Run a demo:
