@@ -86,8 +86,6 @@ $ babeltrace ~/.ros/tracing/e2e_demo/ | grep -e rclcpp_publish -e rclcpp_subscri
 $ ls ~/.ros/tracing/e2e_demo  
 ust  
 $ . ~/ros2_ws/install/setup.bash  
-$ # trace_create_template [/path/to/trace_result] [/path/to/architecture]  
-$ trace_create_template ~/.ros/tracing/e2e_demo ./architecture.json  
 $ cat ./architecture.json  
 {  
   "target_path": {},  
