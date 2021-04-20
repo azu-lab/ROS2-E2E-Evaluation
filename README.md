@@ -82,7 +82,7 @@ $ ls ~/.ros/tracing/
 e2e_demo  e2e_demo_clock % e2e_demo: trace data, e2e_demo_clock: trace data with clock  
 $ babeltrace ~/.ros/tracing/e2e_demo/ | grep -e rclcpp_publish -e rclcpp_subscribe % Check if the trace points are inserted  
 
-3. Generate a architecture file:  
+3. Draw a node graph:  
 $ ls ~/.ros/tracing/e2e_demo  
 ust  
 $ . ~/ros2_ws/install/setup.bash  
