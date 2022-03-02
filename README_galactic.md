@@ -12,10 +12,10 @@ sudo apt-get update
 sudo apt-get install lttng-tools lttng-modules-dkms liblttng-ust-dev
 sudo apt-get install python3-babeltrace python3-lttng
 
-2. Build ROS 2 from source
+2. Build ROS 2 from source  
 https://docs.ros.org/en/galactic/Installation/Ubuntu-Development-Setup.html
 
-3. Build trace-related package
+3. Build trace-related package  
 sudo apt install -y \
   ros-galactic-ros2trace \
   ros-galactic-ros2trace-analysis \
@@ -32,7 +32,7 @@ git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git
 git clone -b galactic_add_tp https://github.com/reishikou/rclcpp.git  
 git clone -b galactic_add_tp https://github.com/reishikou/rcl.git  
 
-5. Install ROS 2 via Debian Packages
+5. Install ROS 2 via Debian Packages  
 https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html
 
 # Run a Autoware demo:   
