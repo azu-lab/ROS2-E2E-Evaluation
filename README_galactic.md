@@ -16,14 +16,14 @@ sudo apt-get install python3-babeltrace python3-lttng
 https://docs.ros.org/en/galactic/Installation/Ubuntu-Development-Setup.html
 
 3. Build trace-related package  
-sudo apt install -y \
-  ros-galactic-ros2trace \
-  ros-galactic-ros2trace-analysis \
-  ros-galactic-tracetools \
-  ros-galactic-tracetools-analysis \
-  ros-galactic-tracetools-launch \
-  ros-galactic-tracetools-read \
-  ros-galactic-tracetools-test \
+sudo apt install -y \  
+  ros-galactic-ros2trace \  
+  ros-galactic-ros2trace-analysis \  
+  ros-galactic-tracetools \  
+  ros-galactic-tracetools-analysis \  
+  ros-galactic-tracetools-launch \  
+  ros-galactic-tracetools-read \  
+  ros-galactic-tracetools-test \  
   ros-galactic-tracetools-trace
 
 4. Build Autoware_Perf  
