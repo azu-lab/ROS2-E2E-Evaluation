@@ -38,7 +38,7 @@ https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html
 # Run a Autoware demo:   
 
 1. Build Autoware.Universe:  
-git clone git@github.com:tier4/autoware.proj.git -b tier4/universe autoware.proj  
+git clone https://github.com/tier4/autoware.proj.gsm8.git -b tier4/universe autoware.proj  
 cd autoware.proj  
 mkdir src  
 vcs import src < autoware.proj.repos  
