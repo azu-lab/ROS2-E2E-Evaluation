@@ -44,7 +44,6 @@ mkdir src
 vcs import src < autoware.proj.repos  
 vcs import src < missing_packages.repos  
 touch src/vendor/grid_map/grid_map_costmap_2d/COLCON_IGNORE  
-
 sudo apt install libnvidia-compute-470  
 sudo apt install libnvidia-decode-470  
 sudo apt install libnvidia-encode-470  
