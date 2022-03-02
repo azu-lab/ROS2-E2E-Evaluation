@@ -2,6 +2,8 @@
 
 This document will introduce how to use our ROS 2 end-to-end evaluation tool.  
 
+ROS 2 version: Foxy.
+
 # Setup:
 1. Install LTTng:  
 apt-add-repository ppa:lttng/stable-2.12  
