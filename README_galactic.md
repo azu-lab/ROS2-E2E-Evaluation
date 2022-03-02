@@ -26,7 +26,7 @@ sudo apt install -y \
   ros-galactic-tracetools-test \
   ros-galactic-tracetools-trace
 
-4. Build Autoware_Perf
+4. Build Autoware_Perf  
 mkdir -p ~/autoware_perf  
 git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git  
 git clone -b galactic_add_tp https://github.com/reishikou/rclcpp.git  
