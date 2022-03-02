@@ -7,10 +7,10 @@ ROS 2 version: Galactic.
 # Setup:
 
 1. Install LTTng:  
-sudo apt-add-repository ppa:lttng/stable-2.12
-sudo apt-get update
-sudo apt-get install lttng-tools lttng-modules-dkms liblttng-ust-dev
-sudo apt-get install python3-babeltrace python3-lttng
+sudo apt-add-repository ppa:lttng/stable-2.12  
+sudo apt-get update  
+sudo apt-get install lttng-tools lttng-modules-dkms liblttng-ust-dev  
+sudo apt-get install python3-babeltrace python3-lttng  
 
 2. Build ROS 2 from source  
 https://docs.ros.org/en/galactic/Installation/Ubuntu-Development-Setup.html
