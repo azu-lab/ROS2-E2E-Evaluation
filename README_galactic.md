@@ -68,7 +68,7 @@ ros2 trace
 terminal 2:  
 sudo sysctl -w net.core.rmem_max=2147483647  
 sudo ifconfig lo multicast  
-ros2 launch autoware_launch logging_simulator.launch.xml vehicle_model:=lexus sensor_model:=aip_xx1 map_path:=/[absolute path]/office_map/ rviz:=true perception:=false  
+ros2 launch autoware_launch logging_simulator.launch.xml vehicle_model:=gsm8 sensor_model:=aip_x2 map_path:=/[absolute path]/office_map/ rviz:=true perception:=false   
 terminal 3:  
 ros2 bag play /[absolute path]/rosbag/rosbag2_2021_04_16-16_47_46_0.db3 --topics /sensing/lidar/top/velodyne_packets /sensing/lidar/left/velodyne_packets /sensing/lidar/right/velodyne_packets /vehicle/status/twist /sensing/imu/imu_data /clock  
 terminal 4:
