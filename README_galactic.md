@@ -27,10 +27,10 @@ sudo apt install -y \
   ros-galactic-tracetools-trace
 
 4. Build Autoware_Perf
-mkdir -p ~/autoware_perf
-git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git
-git clone -b galactic_add_tp https://github.com/reishikou/rclcpp.git
-git clone -b galactic_add_tp https://github.com/reishikou/rcl.git
+mkdir -p ~/autoware_perf  
+git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git  
+git clone -b galactic_add_tp https://github.com/reishikou/rclcpp.git  
+git clone -b galactic_add_tp https://github.com/reishikou/rcl.git  
 
 5. Install ROS 2 via Debian Packages
 https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html
