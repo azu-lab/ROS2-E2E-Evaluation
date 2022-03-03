@@ -12,8 +12,8 @@ sudo apt-get update
 sudo apt-get install lttng-tools lttng-modules-dkms liblttng-ust-dev  
 sudo apt-get install python3-babeltrace python3-lttng  
 
-2. Build ROS 2 from source  
-https://docs.ros.org/en/galactic/Installation/Ubuntu-Development-Setup.html
+2. Install ROS 2 via Debian Packages  
+https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html  
 
 3. Build trace-related package  
 sudo apt install -y \  
@@ -27,13 +27,12 @@ sudo apt install -y \
   ros-galactic-tracetools-trace
 
 4. Build Autoware_Perf  
-mkdir -p ~/autoware_perf  
+mkdir -p ~/autoware_perf_galactic  
 git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git  
 git clone -b galactic_add_tp https://github.com/reishikou/rclcpp.git  
 git clone -b galactic_add_tp https://github.com/reishikou/rcl.git  
-
-5. Install ROS 2 via Debian Packages  
-https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html
+source /opt/ros/galactic/setup.bash  
+colcon build  
 
 # Run a Autoware demo:   
 
@@ -63,7 +62,7 @@ source /opt/ros/galactic/setup.bash
 
 2. Run and measure the application:  
 terminal 1:  
-source ~/autoware_perf/install.setup.bash  
+source ~/autoware_perf_galactic/install/setup.bash  
 ros2 trace  
 terminal 2:  
 sudo sysctl -w net.core.rmem_max=2147483647  
@@ -76,12 +75,3 @@ terminal 4:
 
 3. Analyze the trace data
 
-
-# Conference url:  
-The source node can be downloaded from the following repositories:    
-
-ros2_tracing: https://gitlab.com/reishikou/ros2_tracing.git  
-
-rclcpp: https://github.com/reishikou/rclcpp.git  
-
-rcl: https://github.com/reishikou/rcl.git  
