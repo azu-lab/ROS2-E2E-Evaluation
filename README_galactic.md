@@ -73,5 +73,12 @@ ros2 bag play /[absolute path]/rosbag/[rosbag file(.db3)] --topics /sensing/lida
 terminal 4:
 . /[absolute path]/send_start_and_goal.sh  
 
-3. Analyze the trace data
+3. Analyze the trace data  
+cd ~/autoware_perf_galactic  
+mkdir -p ~/tracelog  
+ros2 trace-analysis process /path/to/trace/directory > tracelog.txt  
+babeltrace /path/to/trace/directory | grep callback_start > callback_start.txt  
+babeltrace /path/to/trace/directory | grep callback_end > callback_end.txt  
+cd tracetools_analysis/tracetools_analysis/analysis/e2e_analysis  
+jupyter notebook
 
