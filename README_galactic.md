@@ -57,7 +57,7 @@ sudo apt install nvidia-dkms-470
 source /opt/ros/galactic/setup.bash   
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=off  --symlink-install --packages-skip-build-finished --continue-on-error --parallel-workers 3  
 
-//write it into bashrc.  
+// Write it into bashrc.  
 source /opt/ros/galactic/setup.bash   
 
 2. Run and measure the application:  
@@ -82,3 +82,9 @@ babeltrace /path/to/trace/directory | grep callback_end > callback_end.txt
 cd tracetools_analysis/tracetools_analysis/analysis/e2e_analysis  
 jupyter notebook
 
+4. Enter the jupyter interface  
+// Write the path of txt file into path = ""  
+// Use rqt and cb function to find the path of end-to-end  
+// Write the node name into node1, node2...  
+// Write the topic name that the node subscribes into topic1, topic2...  
+// Run the code  
