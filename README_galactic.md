@@ -75,13 +75,14 @@ terminal 4:
 . /[absolute path]/send_start_and_goal.sh  
 
 3. Analyze the trace data  
-cd ~/autoware_perf_galactic  
 mkdir -p ~/tracelog  
 ros2 trace-analysis process /path/to/trace/directory > tracelog.txt  
 babeltrace /path/to/trace/directory | grep callback_start > callback_start.txt  
 babeltrace /path/to/trace/directory | grep callback_end > callback_end.txt  
-cd tracetools_analysis/tracetools_analysis/analysis/galactic    
-jupyter notebook
+// Write the path of tracelog into "/path/to/trace/directory"  
+cd ~/autoware_perf_galactic/tracetools_analysis/tracetools_analysis/analysis/galactic  
+jupyter notebook  
+// Click the e2elatency.ipynb  
 
 4. Enter the jupyter interface  
 // Write the path of ~/tracelog into path_prefix = " "  
