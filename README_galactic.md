@@ -27,11 +27,12 @@ sudo apt install -y \
   ros-galactic-tracetools-trace
 
 4. Build Autoware_Perf  
+source /opt/ros/galactic/setup.bash  
 mkdir -p ~/autoware_perf_galactic  
 git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git  
+git clone -b galactic_add_tp https://gitlab.com/reishikou/tracetools_analysis.git  
 git clone -b galactic_add_tp https://github.com/reishikou/rclcpp.git  
 git clone -b galactic_add_tp https://github.com/reishikou/rcl.git  
-source /opt/ros/galactic/setup.bash  
 colcon build  
 
 # Run a Autoware demo:   
@@ -79,11 +80,11 @@ mkdir -p ~/tracelog
 ros2 trace-analysis process /path/to/trace/directory > tracelog.txt  
 babeltrace /path/to/trace/directory | grep callback_start > callback_start.txt  
 babeltrace /path/to/trace/directory | grep callback_end > callback_end.txt  
-cd tracetools_analysis/tracetools_analysis/analysis/e2e_analysis  
+cd tracetools_analysis/tracetools_analysis/analysis/galactic    
 jupyter notebook
 
 4. Enter the jupyter interface  
-// Write the path of txt file into path = ""  
+// Write the path of ~/tracelog into path_prefix = " "  
 // Use rqt and cb function to find the path of end-to-end  
 // Write the node name into node1, node2...  
 // Write the topic name that the node subscribes into topic1, topic2...  
