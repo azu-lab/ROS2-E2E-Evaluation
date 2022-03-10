@@ -28,6 +28,7 @@ sudo apt install -y \
 
 4. Build Autoware_Perf  
 source /opt/ros/galactic/setup.bash  
+// Or write the above code into bashrc.  
 mkdir -p ~/autoware_perf_galactic  
 git clone -b galactic_add_tp https://gitlab.com/reishikou/ros2_tracing.git  
 git clone -b galactic_add_tp https://gitlab.com/reishikou/tracetools_analysis.git  
@@ -58,21 +59,12 @@ sudo apt install nvidia-dkms-470
 source /opt/ros/galactic/setup.bash   
 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=off  --symlink-install --packages-skip-build-finished --continue-on-error --parallel-workers 3  
 
-// Write it into bashrc.  
-source /opt/ros/galactic/setup.bash   
-
 2. Run and measure the application:  
 terminal 1:  
 source ~/autoware_perf_galactic/install/setup.bash  
 ros2 trace  
 terminal 2:  
-sudo sysctl -w net.core.rmem_max=2147483647  
-sudo ifconfig lo multicast  
-ros2 launch autoware_launch logging_simulator.launch.xml vehicle_model:=gsm8 sensor_model:=aip_x2 map_path:=/[absolute path]/office_map/ rviz:=true perception:=false   
-terminal 3:  
-ros2 bag play /[absolute path]/rosbag/[rosbag file(.db3)] --topics /sensing/lidar/top/velodyne_packets /sensing/lidar/left/velodyne_packets /sensing/lidar/right/velodyne_packets /vehicle/status/twist /sensing/imu/imu_data /clock  
-terminal 4:
-. /[absolute path]/send_start_and_goal.sh  
+// Run the ROS 2 application, such as Autoware.Universe  
 
 3. Analyze the trace data  
 mkdir -p ~/tracelog  
