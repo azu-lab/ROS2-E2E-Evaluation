@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "name": "actuator_dummy_node",
+      "namespace": "/",
+      "start_node": false,
+      "end_node": true,
+      "callbacks": [
+        {
+          "type": "subscribe_callback",
+          "topic_name": "/topic5",
+          "symbol": "ActuatorDummy::ActuatorDummy()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#1}",
+          "publish_topic_names": [],
+          "subsequent_callback_symbols": []
+        },
+        {
+          "type": "subscribe_callback",
+          "topic_name": "/topic6",
+          "symbol": "ActuatorDummy::ActuatorDummy()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#2}",
+          "publish_topic_names": [],
+          "subsequent_callback_symbols": []
+        }
+      ],
+      "unlinked_publish_topic_names": []
+    },
+    {
+      "name": "timer_dependency_node",
+      "namespace": "/",
+      "start_node": false,
+      "end_node": false,
+      "callbacks": [
+        {
+          "type": "timer_callback",
+          "period": 90909090.0,
+          "symbol": "TimerDependencyNode::TimerDependencyNode()::{lambda()#2}",
+          "subsequent_callback_symbols": [],
+            "publish_topic_names": [
+                "/topic6"
+            ]
+        },
+        {
+          "type": "subscribe_callback",
+          "topic_name": "/topic4",
+          "symbol": "TimerDependencyNode::TimerDependencyNode()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#1}",
+          "publish_topic_names": [],
+          "subsequent_callback_symbols": ["TimerDependencyNode::TimerDependencyNode()::{lambda()#2}"]
+        }
+      ],
+      "unlinked_publish_topic_names": [
+      ]
+    },
+    {
+      "name": "sensor_dummy_node",
+      "namespace": "/",
+      "start_node": true,
+      "end_node": false,
+      "callbacks": [
+        {
+          "type": "timer_callback",
+          "period": 333333333.0,
+          "symbol": "SensorDummy::SensorDummy()::{lambda()#1}",
+          "subsequent_callback_symbols": [],
+            "publish_topic_names": [
+        "/topic1"
+            ]
+        },
+        {
+          "type": "timer_callback",
+          "period": 142857142.0,
+          "symbol": "SensorDummy::SensorDummy()::{lambda()#2}",
+          "subsequent_callback_symbols": [],
+            "publish_topic_names": [
+        "/topic2"
+            ]
+        }
+      ],
+      "unlinked_publish_topic_names": [
+      ]
+    },
+    {
+      "name": "sub_dependency_node",
+      "namespace": "/",
+      "start_node": false,
+      "end_node": false,
+      "callbacks": [
+        {
+          "type": "subscribe_callback",
+          "topic_name": "/topic3",
+          "symbol": "SubDependencyNode::SubDependencyNode()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#1}",
+            "publish_topic_names": [
+        "/topic4"
+            ],
+            "subsequent_callback_symbols": [
+            ]
+        },
+        {
+          "type": "subscribe_callback",
+          "topic_name": "/topic2",
+          "symbol": "SubDependencyNode::SubDependencyNode()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#2}",
+            "publish_topic_names": [
+        "/topic5"
+            ],
+            "subsequent_callback_symbols": [
+                "SubDependencyNode::SubDependencyNode()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#1}"
+            ]
+        }
+      ],
+      "unlinked_publish_topic_names": [
+      ]
+    },
+    {
+      "name": "no_dependency_node",
+      "namespace": "/",
+      "start_node": false,
+      "end_node": false,
+      "callbacks": [
+        {
+          "type": "subscribe_callback",
+          "topic_name": "/topic1",
+          "symbol": "NoDependencyNode::NoDependencyNode()::{lambda(std::unique_ptr<sensor_msgs::msg::Image>)#1}",
+            "publish_topic_names": [
+                "/topic3"
+            ],
+          "subsequent_callback_symbols": []
+        }
+      ],
+      "unlinked_publish_topic_names": [
+      ]
+    }
+  ]
+}
